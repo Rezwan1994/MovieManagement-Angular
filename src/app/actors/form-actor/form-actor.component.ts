@@ -1,7 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
-import { actorCreationDTO } from './actor.module';
+import { actorCreationDTO, actorDTO } from './actor.module';
 import { Input } from '@angular/core';
 
 @Component({
@@ -14,7 +14,7 @@ constructor(private formBuilder:FormBuilder) { }
 
  form: FormGroup;
  @Input()
- model: actorCreationDTO;
+ model: actorDTO;
  @Output()
  onSaveChanges:EventEmitter<actorCreationDTO> = new EventEmitter<actorCreationDTO>();
   ngOnInit(): void {
