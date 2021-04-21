@@ -1,0 +1,26 @@
+<app-generic-list [list] = "movies">
+    <ng-container loading>
+    <span>This is loading</span>
+    </ng-container>
+    <ng-container content>
+        <div class="movies-container">
+            <div *ngFor="let movie of movies; let index = index" class="movie-container">
+                <a>
+                    <img [src] = "movie.poster" alt="Poster">
+                </a>
+                <p>
+                    <a>
+                        {{movie.title}}
+                    </a>
+                </p>
+                <div>
+                    <button mat-flat-button color="primary">Edit</button>
+                    <button  mat-flat-button color="warn"(click)="Remove(index)"> Remove</button>
+                </div>
+            </div>
+        </div>
+        
+    </ng-container>
+</app-generic-list>
+
+
