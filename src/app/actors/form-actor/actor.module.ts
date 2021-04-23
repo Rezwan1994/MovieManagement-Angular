@@ -9,4 +9,5 @@ export interface actorDTO{
     dateofbirth:Date;
     picture:string;
     biography:string;
+    
 }
