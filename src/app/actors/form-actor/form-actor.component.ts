@@ -23,7 +23,8 @@ constructor(private formBuilder:FormBuilder) { }
         validators:[Validators.required]
       }],
       dateofbirth:'',
-      picture:''
+      picture:'',
+      biography:''
     })
     if(this.model != undefined)
     {
@@ -36,5 +37,7 @@ constructor(private formBuilder:FormBuilder) { }
   SaveChanges(){
     this.onSaveChanges.emit(this.form.value);
   }
-
+  changeMarkDown(content:any){
+    this.form.get('biography')?.setValue(content);
+  }
 }

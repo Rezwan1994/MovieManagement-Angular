@@ -11,8 +11,9 @@ export class EditActorComponent implements OnInit {
 
   constructor(private activeRoute:ActivatedRoute) { }
   model:actorDTO ={name:"Rezwan",dateofbirth: new Date(),
-  picture:"https://m.media-amazon.com/images/M/MV5BNzZiNTEyNTItYjNhMS00YjI2LWIwMWQtZmYwYTRlNjMyZTJjXkEyXkFqcGdeQXVyMTExNzQzMDE0._V1_UX214_CR0,0,214,317_AL_.jpg"}
-
+  picture:"https://m.media-amazon.com/images/M/MV5BNzZiNTEyNTItYjNhMS00YjI2LWIwMWQtZmYwYTRlNjMyZTJjXkEyXkFqcGdeQXVyMTExNzQzMDE0._V1_UX214_CR0,0,214,317_AL_.jpg",
+  biography:"Test value"}
+ 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
       alert(params.id);
