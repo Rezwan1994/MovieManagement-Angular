@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { theaterCreationDTO } from '../theater.module';
 
 @Component({
   selector: 'app-create-movietheater',
@@ -12,8 +13,9 @@ export class CreateMovietheaterComponent implements OnInit {
 
   ngOnInit(): void {
 
+    
   }
-  SaveChanges(){
-    this.router.navigate(["/theater"])
+  SaveChanges(theaterCreationDTO:theaterCreationDTO){
+    console.log(theaterCreationDTO);
   }
 }
